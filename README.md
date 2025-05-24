@@ -57,6 +57,36 @@ Este projeto utiliza o banco de dados em memória H2.
 
 ---
 
+## ☁️ Provisionamento no Azure
+
+### 1. Criar grupo de recursos e VM
+
+Execute o script abaixo para criar a infraestrutura no Azure:
+
+```bash
+bash azure-scripts/01-create-resource.sh
+bash azure-scripts/02-create-virtual-machine.sh
+bash azure-scripts/03-open-ports.sh
+```
+
+Conecte-se a vm:
+```bash
+ssh user-patio-vision@<IP_DA_VM>
+```
+
+Instale as dependências docker:
+
+```bash
+bash azure-scripts/04-install-docker.sh
+```
+
+Clone o repositório, construa o projeto e execute a aplicação:
+```bash
+bash azure-scripts/05-clone-build-ports.sh
+```
+
+---
+
 ## 🏢 PÁTIOS
 
 ### 🔹 Listar todos os pátios

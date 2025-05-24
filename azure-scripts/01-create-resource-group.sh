@@ -1,0 +1,1 @@
+az group create --name rg-patio-vision --location eastus
